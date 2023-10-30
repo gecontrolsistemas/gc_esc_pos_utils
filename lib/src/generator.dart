@@ -157,8 +157,7 @@ class Generator {
       // final Image slice = copyCrop(biggerImage, x: left, y: 0, width: lineHeight, height: heightPx);
       // final Uint8List bytes = slice.getBytes(order: ChannelOrder.luminance);
       // blobs.add(bytes);
-      final Image slice = copyCrop(biggerImage,
-          x: left, y: 0, width: lineHeight, height: heightPx);
+      final Image slice = copyCrop(biggerImage, x: left, y: 0, width: lineHeight, height: heightPx);
       grayscale(slice);
       final imgBinary = slice.convert(numChannels: 1);
       final bytes = imgBinary.getBytes();
